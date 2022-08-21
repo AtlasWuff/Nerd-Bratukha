@@ -1,0 +1,12 @@
+{
+  "name": "Nerd Bratukha",
+  "description": "A discord bot capable of creating and managing to-do lists w/ several topic instances. Can also act as a template for other discord bots to be made from.",
+  "repository": "https://github.com/Its-Tachanks/Nerd-Bratukha",
+  "logo": "https://cdn.discordapp.com/attachments/894669724305215509/1010974959390167060/NerdBratukha.png",
+  "keywords": ["Node", "Discord Bot", "Discord", "Discord Bot Templaye", "Homework", "Organization", "School"],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
