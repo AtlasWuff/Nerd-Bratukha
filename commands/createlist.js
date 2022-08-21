@@ -34,7 +34,7 @@ module.exports = {
             embeds: [{
                 title: interaction.options.getString("topic"),
                 color: interaction.options.getInteger("color") == null ? 12717312 : interaction.options.getInteger("color"),
-                description: ""
+                description: "*Empty*"
             }],
             ephemeral: false,
             components: [managmentRow]

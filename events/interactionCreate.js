@@ -20,7 +20,8 @@ module.exports = async (client, interaction) => {
     // ** Buttons Handler
     try {
       const buttonevent = client.buttonevents.get(interaction.customId);
-      await buttonevent.execute(client, interaction);
+      const msgObject = await interaction.channel.messages.fetch(interaction.message.id)
+      await buttonevent.execute(client, interaction, msgObject);
     } catch (error) {
       console.log("\x1b[31m", "Error: " + error.message);
       await interaction.reply({ embeds: [{
