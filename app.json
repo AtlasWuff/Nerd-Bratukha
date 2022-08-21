@@ -8,5 +8,14 @@
     {
       "url": "heroku/nodejs"
     }
-  ]
+  ],
+  "env": {
+    "DISCORD_TOKEN": {
+      "description": "Your discord bot's token",
+      "value" : "Your token here"
+    }
+  },
+  "scripts": {
+    "postdeploy": "node index.js"
+  }
 }

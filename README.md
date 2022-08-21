@@ -16,8 +16,13 @@ A discord bot capable of creating and managing to-do lists w/ several topic inst
 ### 3rd party provider (Recommended)
 
 1. Create a heroku account and project as desired
-2. Go to Settings -> Config Vars and create a var called "DISCORD_TOKEN" with a value of your bot's token
-3. Go to Deploy -> De
+2. Create a heroku project with the button below
+
+   [![Deployheroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Its-Tachanks/Nerd-Bratukha)
+
+3. Go to Settings -> Config Vars and create a var called "DISCORD_TOKEN" with a value of your bot's token
+4. Go to Deploy -> Enable automatic deploys
+5. Go to Overview -> Dyno formation and disable web npm start & and enable worker node index.js (If you dont see these, deploy your branch manually once and let it build)
 
 ### Locally hosted
 
