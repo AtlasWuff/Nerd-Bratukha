@@ -28,5 +28,6 @@ A discord bot capable of creating and managing to-do lists w/ several topic inst
 
 1. Clone this repository
 2. Create a file named ".env" in your project root with the content of "DISCORD_TOKEN="Your bot token here""
-3. CD within the root
-4. Run "node index.js"
+3. Modify the config.json to hold your bot's client id found within the discord developer website
+4. CD within the root
+5. Run "node index.js"
