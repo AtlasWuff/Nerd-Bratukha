@@ -15,7 +15,6 @@ module.exports = {
     client.once("messageCreate", async (msg) => {
       if (msg.author.id == interaction.user.id) {
         const newDesc = msgEmbed.description == "*Empty*" ? "‣ " + msg.content : msgEmbed.description + "\n‣ " + msg.content
-
         await message.edit({
           embeds: [{
               title: msgEmbed.title,
@@ -26,7 +25,6 @@ module.exports = {
           components: message.components
         })
 
-        console.log("error here !!!!!!!!!!!!!!!!")
         await msg.delete()
       }
     })
