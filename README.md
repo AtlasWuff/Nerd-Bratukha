@@ -1,2 +1,3 @@
 # Nerd Bratukha
- A discord bot to manage homework or assignments w/ due dates on a per-class basis
+
+A discord bot w/ to-do list functionalities with a per topic basis
