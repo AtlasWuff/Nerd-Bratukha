@@ -2,7 +2,13 @@
 
 A discord bot capable of creating and managing to-do lists w/ several topic instances. Can also act as a template for other discord bots to be made from.
 
+# Invite
+
+https://bit.ly/NerdBratukha
+
 # Hosting
+
+## For paranoid people
 
 ## Dependencies
 
