@@ -8,7 +8,7 @@ https://bit.ly/NerdBratukha
 
 # Hosting
 
-## For paranoid people
+### For paranoid people
 
 ## Dependencies
 
