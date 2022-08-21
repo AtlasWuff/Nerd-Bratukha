@@ -1,11 +1,11 @@
 const { ComponentType, MessageComponentInteraction } = require('discord.js');
 
 module.exports = async (client, interaction) => {
-  const command = client.commands.get(interaction.commandName);
 
   if (interaction.isCommand()) {
     // ** Commands Handler
     try {
+      const command = client.commands.get(interaction.commandName);
       await command.execute(client, interaction);
     } catch (error) {
       console.log("\x1b[31m", "Error: " + error.message);
@@ -18,19 +18,15 @@ module.exports = async (client, interaction) => {
   
   if (interaction.isButton()) {
     // ** Buttons Handler
-    const oldMessage = interaction.message
-    const oldEmbedFields = interaction.message.embeds[0].description
-
-    interaction.reply({ content: "hi", fetchReply: true })
-    .then(() => {interaction.channel.awaitMessages({ max: 1, time: 60000 })
-      .then(collected => {
-        console.log(collected.message)
-      })})
-    
-    /*collector.on('collect', async i => {
-        console.log(i)
-
-        await i.update({ content: 'A button was clicked!', embeds: interaction.message.embeds, components: [] });
-    });*/
+    try {
+      const buttonevent = client.buttonevents.get(interaction.customId);
+      await buttonevent.execute(client, interaction);
+    } catch (error) {
+      console.log("\x1b[31m", "Error: " + error.message);
+      await interaction.reply({ embeds: [{
+        description: 'There was an error while executing this button event!',
+        color: 14550791
+      }], ephemeral: true });
+    }
   }
 }

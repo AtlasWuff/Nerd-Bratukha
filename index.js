@@ -18,8 +18,9 @@ var commands = []
 // Hold commands within client object
 client.config = require("./config.json")
 client.commands = new discord.Collection();
+client.buttonevents = new discord.Collection();
 
-// For every folder in commands
+// ** For every folder in commands
 fs.readdirSync('./commands').forEach(file => {
     const command = require(`./commands/${file}`);
     console.log("\x1b[33m", `Loading Command: ${file}`);
@@ -29,7 +30,16 @@ fs.readdirSync('./commands').forEach(file => {
     commands.push(command.data.toJSON());
 });
 
-// For each file in events, add event to client
+// ** For every folder in buttonevents
+fs.readdirSync('./buttonevents').forEach(file => {
+    const buttonevent = require(`./buttonevents/${file}`);
+    console.log("\x1b[33m", `Loading Button Event: ${file}`);
+
+    // Push buttonevents and stuff to be used for things
+    client.buttonevents.set(file.replace(".js", ""), buttonevent);
+});
+
+// ** For each file in events, add event to client
 const events = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
 for (const file of events) {
     console.log("\x1b[33m", `Loading Event: ${file}`);

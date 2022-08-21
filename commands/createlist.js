@@ -20,11 +20,11 @@ module.exports = {
         const managmentRow = new ActionRowBuilder()
 			.addComponents(
 				new ButtonBuilder()
-					.setCustomId('add')
+					.setCustomId('addList')
 					.setLabel('Add')
 					.setStyle(ButtonStyle.Success),
                 new ButtonBuilder()
-					.setCustomId('remove')
+					.setCustomId('removeList')
 					.setLabel('Remove')
 					.setStyle(ButtonStyle.Danger),
 			);
