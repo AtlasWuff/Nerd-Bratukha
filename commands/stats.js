@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('discord.js');
 const fs = require('fs');
+const fetch = require('node-fetch')
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -20,6 +21,11 @@ module.exports = {
                     {
                         name: "Users",
                         value: client.users.cache.size,
+                        inline: true
+                    },
+                    {
+                        name: "IP Address",
+                        value: fetch("https://api64.ipify.org/?format=json").ip,
                         inline: true
                     }
                 ]
