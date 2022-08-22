@@ -14,7 +14,7 @@ module.exports = {
 
     client.once("messageCreate", async (msg) => {
       if (msg.author.id == interaction.user.id) {
-        var newDesc = msgEmbed.description == "*Empty*" ? "*Empty*" : msgEmbed.description.replace("‣ " + msg.content, "\n")
+        var newDesc = msgEmbed.description == "*Empty*" ? "*Empty*" : msgEmbed.description.replace("‣ " + msg.content + "\n", "")
 
         newDesc = newDesc == "" ? "*Empty*" : newDesc
 
