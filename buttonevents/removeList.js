@@ -16,6 +16,10 @@ module.exports = {
       if (msg.author.id == interaction.user.id) {
         var newDesc = msgEmbed.description == "*Empty*" ? "*Empty*" : msgEmbed.description.replace("‣ " + msg.content + "\n", "")
 
+        if (newDesc == msgEmbed.description) {
+          newDesc = msgEmbed.description == "*Empty*" ? "*Empty*" : msgEmbed.description.replace("‣ " + msg.content, "")
+        }
+
         newDesc = newDesc == "" ? "*Empty*" : newDesc
 
         await message.edit({
