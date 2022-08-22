@@ -8,7 +8,9 @@ module.exports = {
 		.setDescription('View the server and member stats!'),
 
     async execute(client, interaction) {
-        interaction.reply({
+        let ip = await fetch("https://api64.ipify.org/?format=json").then(data => data.json())
+
+        await interaction.reply({
             embeds: [{
                 title: 'Bot Stats',
                 color: 12717312,
@@ -25,7 +27,7 @@ module.exports = {
                     },
                     {
                         name: "IP Address",
-                        value: fetch("https://api64.ipify.org/?format=json").ip,
+                        value: ip.ip,
                         inline: true
                     }
                 ]
