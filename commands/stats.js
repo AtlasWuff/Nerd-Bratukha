@@ -14,11 +14,13 @@ module.exports = {
                 fields: [
                     {
                         name: "Servers",
-                        value: client.guilds.cache.size
+                        value: client.guilds.cache.size,
+                        inline: true
                     },
                     {
                         name: "Users",
-                        value: client.users.cache.size
+                        value: client.users.cache.size,
+                        inline: true
                     }
                 ]
             }],
