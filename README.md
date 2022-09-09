@@ -8,8 +8,6 @@ https://bit.ly/NerdBratukha
 
 # Hosting
 
-### For paranoid people
-
 ## Dependencies
 
 - Node 16.15.1
