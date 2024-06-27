@@ -17,7 +17,7 @@ https://bit.ly/NerdBratukha
 1. Create an application & bot at https://discord.com/developers/applications
 2. Take note of your bot's token when creating one
 
-### 3rd party provider (Recommended)
+### 3rd party provider (**OUTDATED**)
 
 1. Create a heroku account and project as desired
 2. Create a heroku project with the button below
